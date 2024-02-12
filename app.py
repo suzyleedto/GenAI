@@ -30,14 +30,14 @@ if "retry_error" not in st.session_state:
 
 # Set up the page
 st.set_page_config(page_title="Enter title here")
-st.sidebar.title("Title")
+st.sidebar.title("CSAT Analyzer")
 st.sidebar.divider()
-st.sidebar.markdown("Your name", unsafe_allow_html=True)
+st.sidebar.markdown("Analyzes structured CSAT responses for the Best Life Program", unsafe_allow_html=True)
 st.sidebar.markdown("Assistant GPT")
 st.sidebar.divider()
 
 # File uploader for CSV, XLS, XLSX
-uploaded_file = st.file_uploader("Upload your file", type=["csv", "xls", "xlsx"])
+uploaded_file = st.file_uploader("Upload your file containing CSAT responses", type=["csv", "xls", "xlsx"])
 
 if uploaded_file is not None:
     # Determine the file type
